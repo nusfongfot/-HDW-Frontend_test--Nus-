@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+     <button (click)="onClickNavToggle()" mat-button>
+         <mat-icon>menu</mat-icon>
+    </button>
+    <span>NusStock</span>
+    <span class="flex-fill"></span>
+    <div class="d-flex align-items-center">
+        <button mat-button color="white" aria-label="Example icon button with a heart icon">
+        <mat-icon  class="white-icon">search</mat-icon>
+        </button>
+        <div class="vl"></div>
+        <button mat-button color="white" aria-label="Example icon button with a heart icon">
+        <mat-icon  [matBadge]="demoMailNoti" class="white-icon">mail_outline</mat-icon>
+        </button> 
+        <button mat-button color="white" aria-label="Example icon button with a heart icon">        
+        <mat-icon [matBadge]="demoNoti" class="white-icon">notifications_none</mat-icon>
+        </button>
+    </div> 
+
+    <button mat-button [matMenuTriggerFor]="menu">
+        <img class="avatar rounded-circle bg-white m-lg-2"  src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t1.6435-9/113516333_1621542184688901_4430765114830555551_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeG_ufS3pYFjZgSXxJV0Gm-lkK30DzvimSSQrfQPO-KZJMZT8N0itJlPWrYkRv83nB-XoPcnacHgJEkzUxgHnWEk&_nc_ohc=gDwwSbjxgnMAX-rqG7N&_nc_ht=scontent.fkkc3-1.fna&oh=2b9e7465fce18057376b3ce50bd99f72&oe=61CBB8D4" alt="">
+        <span class="ml-2">Admin Nus</span>
+</button>
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+  
+
+
+    
+    
+
+
+  </mat-toolbar>
+
+
+
+
+
+

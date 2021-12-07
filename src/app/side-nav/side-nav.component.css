@@ -1,0 +1,4 @@
+.mat-nav-list .mat-list-item:focus{
+    color:white;
+    background-color: rgb(206, 45, 72);
+}

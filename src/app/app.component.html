@@ -1,0 +1,15 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav [mode]="mobileQueryMax.matches ? 'over' : 'side' "
+    [opened]="mobileQueryMax.matches ? false: true">
+    <app-side-nav (close)="mobileQueryMax.matches ? sidenav.close() : null"></app-side-nav>
+  </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header (toggle)="sidenav.toggle()" (sayHi)="onSayHi($event)"></app-header>
+        <div class="content-wrapper">
+          <app-progress [diameter]="50" [mode]="'indeterminate'"></app-progress>
+          <router-outlet></router-outlet>
+        </div>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
